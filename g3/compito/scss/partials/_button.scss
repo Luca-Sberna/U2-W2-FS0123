@@ -1,6 +1,0 @@
-@each $color in $button {
-    $i: index($button, $color);
-    .btn-#{$i}{
-        background-color: $color;
-    }
-}
