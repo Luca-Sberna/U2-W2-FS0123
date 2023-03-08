@@ -1,0 +1,24 @@
+$font-family: 'Roboto', sans-serif;
+$font-family-headings: 'Montserrat', sans-serif;
+$fs: 2rem, 1.5rem, 1.17rem, 1rem, .83rem, .67rem;
+
+
+@each $val in $fs {
+    $i: index($fs, $val);
+    .fs-#{$i}{
+        font-size: $val;
+    }
+}
+@each $val in $fs {
+    $i: index($fs, $val);
+    h#{$i}{
+        font-family: $font-family-headings;
+        font-size: $val;
+    }
+}
+
+@mixin title(){
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}

@@ -1,12 +1,19 @@
-@import "./partials/reset";
-@import "./partials/colors";
-@import "./partials/spacing";
-@import "./partials/mixins";
-@import "./partials/animations";
-@import "./partials/buttons";
-@import "./partials/fonts";
+@import 'partials/reset';
+@import 'partials/colors';
+@import 'partials/fonts';
+@import 'partials/spacing';
+@import 'partials/animation';
+@import 'partials/mixing';
+@import 'partials/button';
 
-body {
-  margin: 0 auto;
-  background-color: blue;
+
+body{
+    font-family: $font-family;
+    color: $text
 }
+
+
+@include  spacing($directions, $sizes, 'margin');
+@include  spacing($directions, $sizes);
+
+@include grid(4)
