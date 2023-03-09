@@ -1,22 +1,18 @@
-/*
-@mixin animation($radius,$shadow,$border: false){
-    animation-name:
-    animation-duration
-    animation-timing-function
-    animation-delay
-    animation-iteration-count
-    animation-direction
-    animation-fill-mode
-    animation-play-state
-}
-
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@mixin animate-from-top($duration, $start, $end, $delay: 0, $name: from-top) {
+  $uniqueName: animate-#{$name}-#{unique-id()};
+  @keyframes #{$uniqueName} {
+    from {
+      opacity: 0;
+      translate: 0 $start * -1;
+    }
+    to {
+      opacity: 1;
+      translate: 0 $end;
+    }
   }
 
-  to {
-    transform: translateX(100%);
-  }
+  animation-name: #{$uniqueName};
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  animation-delay: $delay;
 }
-*/

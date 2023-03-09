@@ -1,60 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>SASS - Esempio</title>
 </head>
 
 <body>
-
-    <header>
+    <header class="showcase padding-inline-xxl padding-block-lg">
         <nav>
+            <h1 class="logo">SASS</h1>
             <ul>
-                <li>home</li>
-                <li>about</li>
-                <li>servizi</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Servizi</a></li>
             </ul>
         </nav>
+
+        <div class="showcase-content">
+            <div>
+                <h1>Sviluppo e <br /> Web Design</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eligendi tempore atque laborum.
+                    Quisquam nemo at non. Corrupti, vitae dolore.
+                </p>
+                <button class="btn btn-primary">Approfondisci</button>
+                <button class="btn btn-secondary">Accedi</button>
+                <button class="btn btn-tertiary">Contattaci</button>
+            </div>
+            <img src="https://picsum.photos/id/0/2000/2000" class="translate-20" height="600" width="600" />
+        </div>
     </header>
+    <main class="padding-block-xxl">
+        <div class="line-4">
+            <div><img src="https://picsum.photos/id/0/450/450" /></div>
+            <div><img src="https://picsum.photos/id/0/450/450" /></div>
+            <div><img src="https://picsum.photos/id/0/450/450" /></div>
+            <div><img src="https://picsum.photos/id/0/450/450" /></div>
 
-
-    <main>
-
-        <section>
-            <div>
-                <h1>Titolo</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illo quis ut sint voluptate culpa.
-                    Consequatur, architecto laudantium fugit nemo repellendus voluptates assumenda, in corporis, quae
-                    laboriosam eaque sequi adipisci.</p>
-            </div>
-
-        </section>
-
-        <section>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-        </section>
-
+        </div>
     </main>
-
-
 </body>
 
 </html>

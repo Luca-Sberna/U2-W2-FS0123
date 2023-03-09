@@ -1,18 +1,19 @@
-@mixin floating($radius,$shadow,$border: false){
-    border-radius: $radius;
-    box-shadow: $shadow;
-    @if($border){
-      border: $border;  
-    }
+@mixin floating($radius: 20px, $shadow: 0 10px 20px rgb(0 0 0 /0.1), $border: 1px solid transparent) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
 }
 
-@mixin grid($n: 1){
-    .grid{
-        display: flex;
-    }
-    @for $i from 0 to $n {
-        .col-#{calc($i + 1)}{
-            flex-basis: calc(100%/($n - $i));
-        }
-      }
+@mixin shadow($val) {
+  box-shadow: $val;
+}
+
+@mixin grid($n) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  & > * {
+    width: calc(100 / $n) * 1%;
+    flex-grow: 1;
+  }
 }
